@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Better Clipboard",
+    "description": "Enhances the clipboard features on chrome",
+    "version": "1.0",
+    "icons": {
+      "16": "icons/better.svg",
+      "32": "icons/better.svg",
+      "48": "icons/better.svg",
+      "128": "icons/better.svg"
+    },
+    "background": {
+        "service_worker": "background.js"
+      },
+      "action": {
+        "default_icon": {
+            "16": "icons/better.svg",
+            "32": "icons/better.svg",
+            "48": "icons/better.svg",
+            "128": "icons/better.svg"
+        }
+      }
+
+  }
