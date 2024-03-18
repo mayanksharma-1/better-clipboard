@@ -28,3 +28,11 @@ workflows.
 1. Click the "Load unpacked" 
 2. Navigate to the downloaded folder containing the extension's files (unzipped).
 3. Select the folder and click "Open".
+
+### Using the Extension
+1. Once you've loaded the unpacked extension in Chrome, the extension icon will appear in the Chrome toolbar.
+1. Highlight the text you want to copy from a webpage.
+1. Click the extension's icon.
+1. Press the copy button.
+1. Double click extension icon (refresh the extension).
+1. Your copied text is displayed in the extension.
