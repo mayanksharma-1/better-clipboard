@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // button event here
   const copyButton = document.getElementById("copy-button");
 
   copyButton.addEventListener("click", () => {
@@ -7,21 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: "get-selection" }); // Trigger background script
   });
 
-  chrome.storage.local.get('copiedItems', (data) => {
-    const copiedItems = data.copiedItems || [];
+  function updateCopiedItems() {
+    chrome.storage.local.get('copiedItems', (data) => {
+      const copiedItems = data.copiedItems || [];
+      const container = document.getElementById('copied-items-container');
 
-    const container = document.getElementById('copied-items-container');
+      // Clear existing content
+      container.innerHTML = '';
 
-    // Clear existing content
-    container.innerHTML = '';
-
-    copiedItems.forEach((item) => {
-      const widget = document.createElement('div');
-      widget.classList.add('copied-item');
-
-      widget.textContent = item;
-
-      container.appendChild(widget);
+      copiedItems.forEach((item) => {
+        const widget = document.createElement('div');
+        widget.classList.add('copied-item');
+        widget.textContent = item;
+        container.appendChild(widget);
+      });
     });
+  }
+
+  // Initial load
+  updateCopiedItems();
+
+  // Listen for changes in storage
+  chrome.storage.onChanged.addListener((changes, namespace) => {
+    if (changes.copiedItems) {
+      updateCopiedItems();
+    }
   });
 });
