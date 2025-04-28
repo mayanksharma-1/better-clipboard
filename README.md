@@ -12,7 +12,7 @@
 
 **Preview**: 
 
-![screenshot of the better clipboard extension](https://media.discordapp.net/attachments/535415861285224459/1347923236746170408/image.png?ex=67cd96d6&is=67cc4556&hm=d08309b898a55f0d1ba8418fab5e687d7161a6113f8843bb693329a975d5391f&=&format=webp&quality=lossless&width=374&height=484)
+![screenshot of the better clipboard extension](https://i.gyazo.com/384bf8f80cfa1e190ea3a23504d844e5.png)
 
 ### Downloading the Extension:
 1. Click on the green "Code" button. 
